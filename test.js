@@ -10,7 +10,9 @@ const generate = require('./generate');
 const encoders = [
     require('./encoders/json'),
     require('./encoders/pson'),
-    require('./encoders/avsc')
+    require('./encoders/avsc'),
+    require('./encoders/msgpack5'),
+    require('./encoders/msgpack-lite')
 ];
 
 const compressors = [
