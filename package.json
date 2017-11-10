@@ -1,0 +1,13 @@
+{
+    "name": "compare-formats",
+    "description": "",
+    "version": "0.0.0",
+    "author": "Paul Loyd <pavelko95@gmail.com>",
+    "license": "MIT",
+    "main": "test.js",
+    "dependencies": {
+        "benchmark": "^2.1.4",
+        "cli-table2": "^0.2.0",
+        "pretty-bytes": "^4.0.2"
+    }
+}
