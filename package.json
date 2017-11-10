@@ -8,10 +8,11 @@
     "dependencies": {
         "avsc": "^5.0.7",
         "benchmark": "^2.1.4",
-        "msgpack-lite": "^0.1.26",
-        "msgpack5": "^3.6.0",
+        "chalk": "^2.3.0",
         "cli-table2": "^0.2.0",
         "lz4": "^0.5.3",
+        "msgpack-lite": "^0.1.26",
+        "msgpack5": "^3.6.0",
         "pretty-bytes": "^4.0.2",
         "pson": "^2.0.0",
         "snappy": "^6.0.1"
