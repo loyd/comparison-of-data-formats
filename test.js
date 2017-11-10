@@ -9,14 +9,15 @@ const generate = require('./generate');
 
 const encoders = [
     require('./encoders/json'),
-    require('./encoders/avsc'),
+    require('./encoders/pson'),
+    require('./encoders/avsc')
 ];
 
 const compressors = [
     require('./compressors/none'),
     require('./compressors/gzip'),
     require('./compressors/lz4'),
-    require('./compressors/snappy'),
+    require('./compressors/snappy')
 ];
 
 const data = generate(10);
