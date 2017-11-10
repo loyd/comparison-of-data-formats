@@ -16,6 +16,7 @@ const compressors = [
     require('./compressors/none'),
     require('./compressors/gzip'),
     require('./compressors/lz4'),
+    require('./compressors/snappy'),
 ];
 
 const data = generate(10);
