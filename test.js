@@ -7,9 +7,13 @@ const Table = require('cli-table2');
 
 const generate = require('./generate');
 
-const encoders = [];
+const encoders = [
+    require('./encoders/json'),
+];
 
-const compressors = [];
+const compressors = [
+    require('./compressors/none'),
+];
 
 const data = generate(10);
 const suite = new Benchmark.Suite;
