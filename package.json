@@ -6,6 +6,7 @@
     "license": "MIT",
     "main": "test.js",
     "dependencies": {
+        "avsc": "^5.0.7",
         "benchmark": "^2.1.4",
         "cli-table2": "^0.2.0",
         "pretty-bytes": "^4.0.2"
