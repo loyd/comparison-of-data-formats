@@ -15,6 +15,7 @@ const encoders = [
 const compressors = [
     require('./compressors/none'),
     require('./compressors/gzip'),
+    require('./compressors/lz4'),
 ];
 
 const data = generate(10);
