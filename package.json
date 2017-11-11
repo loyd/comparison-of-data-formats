@@ -1,7 +1,7 @@
 {
-    "name": "compare-formats",
+    "name": "comparison-of-data-formats",
     "description": "",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "author": "Paul Loyd <pavelko95@gmail.com>",
     "license": "MIT",
     "main": "test.js",
