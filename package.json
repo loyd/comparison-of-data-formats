@@ -14,6 +14,7 @@
         "msgpack-lite": "^0.1.26",
         "msgpack5": "^3.6.0",
         "pretty-bytes": "^4.0.2",
+        "protobufjs": "^6.8.0",
         "pson": "^2.0.0",
         "snappy": "^6.0.1"
     }

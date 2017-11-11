@@ -9,12 +9,18 @@ const chalk = require('chalk');
 
 const generate = require('./generate');
 
+const schemas = {
+    avro: path.resolve('./schemas/avro.json'),
+    proto: path.resolve('./schemas/proto.proto')
+};
+
 const encoders = [
     require('./encoders/json'),
     require('./encoders/pson'),
-    require('./encoders/avsc')(path.resolve('./schemas/avro.json')),
+    require('./encoders/avsc')(schemas.avro),
     require('./encoders/msgpack5'),
-    require('./encoders/msgpack-lite')
+    require('./encoders/msgpack-lite'),
+    require('./encoders/protobufjs')(schemas.proto)
 ];
 
 const compressors = [
@@ -46,7 +52,7 @@ function main(n) {
             console.log(`Checking ${title}...`);
 
             const encoded = to(data);
-            const actual = clean(from(encoded));
+            const actual = unify(from(encoded));
 
             assert.deepEqual(actual, data);
 
@@ -128,8 +134,16 @@ function main(n) {
     console.log(String(table));
 }
 
+function unify(obj) {
+    return JSON.parse(JSON.stringify(clean(obj)));
+}
+
 function clean(obj) {
     for (const name in obj) {
+        if (!obj.hasOwnProperty(name)) {
+            continue;
+        }
+
         if (obj[name] === null) {
             delete obj[name];
         } else if (typeof obj[name] === 'object') {
