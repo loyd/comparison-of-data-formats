@@ -1,5 +1,9 @@
 # Comparison of data formats
 
+* Uses a large realistic record.
+* Measures the performance of `decode(decompress(compress(encode(data))))`.
+* Measures the size of `compress(encode(data))`.
+
 ## How to run?
 
 ```bash
