@@ -18,7 +18,8 @@ const encoders = [
 
 const compressors = [
     require('./compressors/none'),
-    require('./compressors/gzip'),
+    require('./compressors/gzip')(6),
+    require('./compressors/deflate')(6),
     require('./compressors/lz4'),
     require('./compressors/snappy')
 ];

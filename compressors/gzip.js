@@ -2,8 +2,10 @@
 
 const zlib = require('zlib');
 
-exports.name = 'gzip';
+module.exports = level => ({
+    name: `gzip (${level})`,
 
-exports.compress = zlib.deflateSync;
+    compress: data => zlib.gzipSync(data, {level}),
 
-exports.decompress = zlib.inflateSync;
+    decompress: zlib.gunzipSync
+});
