@@ -1,6 +1,7 @@
 'use strict';
 
 const assert = require('assert');
+const path = require('path');
 const Benchmark = require('benchmark');
 const prettyBytes = require('pretty-bytes');
 const Table = require('cli-table2');
@@ -11,7 +12,7 @@ const generate = require('./generate');
 const encoders = [
     require('./encoders/json'),
     require('./encoders/pson'),
-    require('./encoders/avsc'),
+    require('./encoders/avsc')(path.resolve('./schemas/avro.json')),
     require('./encoders/msgpack5'),
     require('./encoders/msgpack-lite')
 ];
