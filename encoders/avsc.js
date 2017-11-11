@@ -214,7 +214,7 @@ const Product = Type.forSchema({
                 fields: [
                     {name: 'min', type: 'string'},
                     {name: 'max', type: 'string'},
-                    {name: 'currency', type: 'string'},
+                    {name: 'currency', type: {type: 'enum', symbols: ['RUR']}},
                     {name: 'avg', type: 'string'}
                 ]
             }
